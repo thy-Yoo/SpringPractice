@@ -25,26 +25,32 @@ public class Book {
 						+ i 
 						+ "&Stockstatus=1&PublishDay=84&CID=50917&SearchOption=")
 						.get();
-				Elements title = doc.select("tr > td > table > tbody > tr > td > div > ul > li > a:nth-child(1) > b:nth-child(1)");
-				//Elements cate1 = doc.select("tr > td > table > tbody > tr > td > div > ul > li > a:nth-child(1) > b:nth-child(1)");//img[src*=/recipe/]
-				//Elements cate2 = doc.select("tr > td > table > tbody > tr > td > div > ul > li > a:nth-child(1) > b:nth-child(1)");
-				//Elements cate3 = doc.select("tr > td > table > tbody > tr > td > div > ul > li > a:nth-child(1) > b:nth-child(1)");
-				//#book_title_14 > a:nth-child(1) 직지 html body div#wrap div#container.type3 div#content div#category_section.category_section.category_section2 ol.basic.top100 li dl dt#book_title_14 a.N=a:bta.title
+				Elements title = doc.select("tr > td > div > ul > li:nth-child(2) > a:nth-child(1) > b:nth-child(1)");
+				Elements writer = doc.select("tr > td > div > ul > li:nth-child(3) > a:nth-child(1)");
+				Elements publisher = doc.select("tr > td > div > ul > li:nth-child(3) > a:nth-child(2)");
+				Elements price = doc.select("tr > td > div > ul > li:nth-child(4) > span:nth-child(1)");				
+				//Elements pubDate = doc.select("");
 				//System.out.println("title.size()="+title.size()); //확인용.
 				for (int j = 0; j < title.size() ; j++) {
 					try {
 						BookVO vo = new BookVO();
 						vo.setBnum(k);
-						vo.setTitle(title.get(j).text());
 						vo.setCate1("국내도서");
 						vo.setCate2("소설/시/희곡");
 						vo.setCate3("한국소설");
+						vo.setTitle(title.get(j).text());
+						vo.setWriter(writer.get(j).text());
+						vo.setPublisher(publisher.get(j).text());
+						vo.setPrice(price.get(j).text());
 						
 						//크롤링 잘 되었는지 확인
 						System.out.println("Bnum:" + k);
-						System.out.println("Title:" + vo.getTitle());
 						System.out.println("Cates:" + vo.getCate1() + " > "  + vo.getCate2() + " > " + vo.getCate3());
-						System.out.println("k=" + k);
+						System.out.println("Title:" + vo.getTitle());
+						System.out.println("Writer:" + vo.getWriter());
+						System.out.println("Publisher:" + vo.getPublisher());
+						System.out.println("Price:" + vo.getPrice());
+						
 						
 						//dao에 데이터 넣기
 						//dao.bookDataInsert(vo);
