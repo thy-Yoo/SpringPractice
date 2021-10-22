@@ -20,7 +20,7 @@ public class BookVO {
 	String writer; //작가
 	String publisher; //출판사
 	String price; //가격
-	String pubDate; //출간월
+	String pubDate; //출간 월
 	String salesPoint; //세일즈포인트 (판매지수) 긁어오는것 아님. 장바구니 기능 구현 후 적용.
 	String pageno;
 	

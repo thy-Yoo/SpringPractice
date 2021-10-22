@@ -95,7 +95,7 @@ public class Book {
 						System.out.println("============================================");
 						
 					
-						//dao에 데이터 넣기
+						//dao에 데이터  넣기
 						dao.bookDataInsert(vo);
 						//recipeDetailData(vo.getLink(), k);
 						k++;
