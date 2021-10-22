@@ -9,7 +9,7 @@ public class Book {
 	public void bookAllDataCrawling()
 	{
 		int k = 1;
-		try {
+		try { 
 			for (int i = 1; i <= 20; i++) {
 				Document doc = Jsoup.connect("=accuracy&page=" + i)
 						.get();
