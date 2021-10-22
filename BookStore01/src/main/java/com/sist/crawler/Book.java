@@ -9,7 +9,9 @@ import com.sist.vo.BookVO;
 
 public class Book {
 	
-	BookDAO dao=new BookDAO();
+	
+    BookDAO dao = new BookDAO();
+	
 	public void bookAllDataCrawling()
 	{
 		int k = 1;
@@ -19,7 +21,9 @@ public class Book {
 				 * 인터파크 불가 -> 주소가 숨겨져 있음.
 				 * 네이버 open api -> 스프링을 더 공부해야함.
 				*/
-				/* 알라딘 URL */
+				/* 알라딘 URL 
+				 * doc = 국내도서 > 소설/시/희곡 > 한국소설
+				 * */
 				Document doc = Jsoup.connect("https://www.aladin.co.kr/shop/wbrowse.aspx?"
 						+ "BrowseTarget=List&ViewRowsCount=25&ViewType=Detail&PublishMonth=0&SortOrder=2&page="
 						+ i 
@@ -53,7 +57,7 @@ public class Book {
 						
 						
 						//dao에 데이터 넣기
-						//dao.bookDataInsert(vo);
+						dao.bookDataInsert(vo);
 						//recipeDetailData(vo.getLink(), k);
 						k++;
 
