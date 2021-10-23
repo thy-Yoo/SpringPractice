@@ -1,14 +1,14 @@
 package com.sist.main;
 
-import com.sist.crawler.Book;
+import com.sist.crawler.*;
 
 public class MainClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated  method stub
 		
-		Book bookcrawl = new Book();
-		bookcrawl.bookAllDataCrawling();
+		BookCrawler_ala bookcrawler = new BookCrawler_ala();
+		bookcrawler.bookCrawling01();
 		
 	}
 

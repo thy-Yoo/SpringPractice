@@ -57,7 +57,7 @@ public class BookDAO {
 			try {
 
 				getConnection();
-				String sql = "INSERT INTO books VALUES(?,?,?,?,?,?,?,?,?)";
+				String sql = "INSERT INTO books VALUES(?,?,?,?,?,?,?,?,?,?)";
 				ps = conn.prepareStatement(sql);
 				ps.setInt(1, vo.getBnum());
 				// ps.setString(2, vo.getPoster());
@@ -65,10 +65,11 @@ public class BookDAO {
 				ps.setString(3, vo.getCate1());
 				ps.setString(4, vo.getCate2());
 				ps.setString(5, vo.getCate3());
-				ps.setString(6, vo.getWriter());
-				ps.setString(7, vo.getPublisher());
-				ps.setString(8, vo.getPrice());
-				ps.setString(9, vo.getPageno());
+				ps.setString(6, vo.getCate4());
+				ps.setString(7, vo.getWriter());
+				ps.setString(8, vo.getPublisher());
+				ps.setString(9, vo.getPrice());
+				ps.setString(10, vo.getPageno());
 
 				ps.executeUpdate();
 

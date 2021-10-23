@@ -16,7 +16,7 @@ package com.sist.vo;
 public class BookVO {
 	int bnum;
 	String title;
-	String cate1, cate2, cate3;
+	String cate1, cate2, cate3, cate4;
 	String writer; //작가
 	String publisher; //출판사
 	String price; //가격
@@ -53,6 +53,14 @@ public class BookVO {
 	}
 	public void setCate3(String cate3) {
 		this.cate3 = cate3;
+	}
+	
+	
+	public String getCate4() {
+		return cate4;
+	}
+	public void setCate4(String cate4) {
+		this.cate4 = cate4;
 	}
 	public String getWriter() {
 		return writer;
