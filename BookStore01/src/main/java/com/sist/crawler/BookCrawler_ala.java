@@ -132,7 +132,7 @@ public class BookCrawler_ala {
 							
 						
 							//dao에 데이터  넣기
-							dao.bookDataInsert(vo);
+							//dao.bookDataInsert(vo);
 							//recipeDetailData(vo.getLink(), k);
 							k++;
 
