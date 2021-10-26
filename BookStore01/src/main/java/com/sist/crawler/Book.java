@@ -12,7 +12,7 @@ import com.sist.vo.BookVO;
 public class Book {
 	
 	
-    BookDAO dao = new BookDAO();
+    BookDBInsert db_insert = new BookDBInsert();
 	
 	public void bookAllDataCrawling()
 	{
@@ -95,8 +95,8 @@ public class Book {
 						System.out.println("============================================");
 						
 					
-						//dao에 데이터  넣기
-						dao.bookDataInsert(vo);
+						//DB에 데이터 넣기.
+						db_insert.bookDataInsert(vo);
 						//recipeDetailData(vo.getLink(), k);
 						k++;
 
