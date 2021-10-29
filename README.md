@@ -1,5 +1,10 @@
 # SpringPractice
 스프링 프레임워크 공부용
+### Repository 설명
+#### teamMyDev
+팀프로젝트에서 제가 맡은 파트를 복습하기 위한 장소입니다. <br>
+
+---
 
 ### 스프링을 사용하는 목적
 #### DI (의존성 주입 Dependency Injection) ⭐⭐⭐ 
