@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/* 
+	ogani-mast/css 폴더에 넣어두면 찾기 힘들것 같아서
+ 	저희 book페이지에서 쓰기위해 추가한 스타일들은 여기에 넣어두었어용
+ 	작업하실때 참고하셔요..!
+ 	
+ */
+ 
+ /* list 페이지 */
+div.product__pagination{
+	margin : 0 auto;
+	width: max-content;
+}
+div.product__pagination ul{
+	list-style: none;
+}
+div.product__pagination ul li{
+	float: left;
+}
+
+/* detail 페이지 */
+p.bookdetail_textdata_title{
+	width:70px;
+	padding-bottom:0px;
+	padding-top: 0px;
+	margin-top:0px;
+	margin-bottom:8px;
+	margin-right:50px;
+	font-weight: bold;
+	float: left;
+	color:#3f3f3f;
+	
+}
+p.bookdetail_textdata{
+	padding-bottom:0px;
+	padding-top: 0px;
+	margin-top:0px;
+	margin-bottom:8px;
+	color:#3f3f3f;
+	
+}
+div.bookdetail_textdata_group{
+	margin-bottom:40px;
+}
+div.bookdetail_pricedata_group p{
+	color:#c60303;
+}
+
+
+div.print_comments_stars{
+	clear :both;
+	width:100px;
+	float:left;
+	height: inherit;
+	color: #ffbf13;
+	
+}
+div.print_comments_texts{
+	float:left;
+	width:500px;
+	margin-bottom:10px;	
+}
+div.print_comments_texts div.comments_title{
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom:5px;
+}
+div.print_comments_texts div.comments_comments{
+	font-size: 13px;
+	margin-bottom:10px;
+}
+div.print_comments_texts div.comments_writer{
+	font-size: 11px;
+	color:gray;
+	width:100px;
+}
+div.print_comments_texts div.comments_writedate{
+	font-size: 11px !important;
+	color:gray !important;
+	float:right;
+}
+div.print_comments_texts div.comments_write_data{
+	
+}
+
+div.input_and_print_comments{
+	width:max-content;
+	margin:0 auto;
+}
+div.input_comments{
+	text-align: right;
+}
+div.input_comments input.comment_text[type=text] {
+	color: #505050;
+    width: 83%;
+    margin: 10px auto;
+    height: 80px;
+    border: 1px solid #E2E2E2;
+}
+
+input.commnet_submit_btn{
+	border: none;
+	background-color: #7BBD39;
+	color:white;
+	border-radius: 2px;
+	width:60px;
+	height:35px;
+	float:inherit;
+}
+
+form.comment_form{
+	margin-bottom: 40px;
+}

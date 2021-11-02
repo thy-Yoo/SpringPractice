@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.sist</groupId>
-	<artifactId>main</artifactId>
-	<name>BookStore01</name>
+	<artifactId>web</artifactId>
+	<name>SpringTeamBookProject</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
@@ -21,15 +21,42 @@
 		</repository>
 	</repositories>
 	<dependencies>
+	<!-- 
+		1. JDK => 1.8
+		2. STS => 3.8.4 (X)
+		3. 오라클 => 18 (버전의 ojdbc는 8버전만 실행가능)
+		4. 톰캣 => 8.5
+	 -->
+		<!-- hibernate(객체 검증 : 346page) : 호환성 jdk -->
+		<!-- <dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-validator</artifactId>
+		    <version>6.0.10.Final</version>
+		</dependency> -->
+		<!-- 
+				6
+				7
+		 -->
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-validator</artifactId>
+		    <version>5.4.3.Final</version>
+		</dependency>
+		<!-- validation-api -->
+		<!-- <dependency>
+		    <groupId>javax.validation</groupId>
+		    <artifactId>validation-api</artifactId>
+		    <version>1.1.0.Final</version>
+		</dependency> -->
 	    <!-- ojdbc(Maven에서 사용이 안된다)-->
 	    <!-- 시스템 경로 줄때 사용  -->
-	    <!-- <dependency>
+	    <dependency>
 		    <groupId>com.oracle</groupId>
 		    <artifactId>ojdbc8</artifactId>
 		    <version>8.0</version>
 		    <scope>system</scope>
 		    <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/ojdbc8.jar</systemPath>
-		</dependency> -->
+		</dependency>
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -312,23 +339,23 @@
 		<dependency>
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-core</artifactId>
-			<version>2.2.2</version>
+			<version>3.0.3</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-jsp</artifactId>
-			<version>2.2.2</version>
+			<version>3.0.3</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-api</artifactId>
-			<version>2.2.2</version>
+			<version>3.0.3</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-servlet</artifactId>
-			<version>2.2.2</version>
+			<version>3.0.3</version>
 		</dependency>
 		
 		<dependency>
@@ -509,5 +536,4 @@
             </plugin>
         </plugins>
     </build>
-	
 </project>
