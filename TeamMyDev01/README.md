@@ -11,7 +11,7 @@ VO, DAO, Controller, Mapper, *.xml
 
 ##### 데이터 출력
 신간 도서 목록 페이지
-<img src = "../imgs/01_book3.png" style="width:99%">
+<img src = "../imgs/01_booklist.png" style="width:99%">
 <br><br>
 신간 도서 상세 페이지
 <img src = "../imgs/01_book1.png" style="width:99%">
