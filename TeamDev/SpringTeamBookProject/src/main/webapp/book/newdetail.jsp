@@ -30,7 +30,6 @@ $( ".star_rating a" ).click(function() {
 
 
 
-
 $(function(){
 /* 	$("#btn-order").click(function(){
 		let book_no = $("#book_no").val();
