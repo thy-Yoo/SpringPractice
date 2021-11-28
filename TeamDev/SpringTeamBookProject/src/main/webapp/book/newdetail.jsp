@@ -324,37 +324,32 @@ $(function(){
                                 <div class="product__details__tab__desc">
                                 <div class="input_and_print_comments">
                                    
-									 <!-- 리뷰 입력 파트 -->
-                                    <c:if test="${sessionScope.id!=null }"><!--로그인 된 상태 -->
-									<div class="input_comments">
-										<form method="post" action="newdetail_commentInput.do" class="comment_form" name="myform" id="myform">
-											<input type="text" class="comment_title" size=70 name="title">
-											<p></p>
-									        <input type="text" class="comment_text" size=70 name="comments">
-									        <input type="hidden" name="bno" value="${vo.bno }">
-									        <input type="hidden" name="writer" value="${sessionScope.name }">
-									        <input type="hidden" name="c_userid" value="${sessionScope.id }">
-									        <p></p>
-									        <!-- 평점 선택창 -->
-								         <fieldset>
-								        <input type="radio" name="rating" value="5" id="rate1"><label for="rate1">⭐</label>
-								        <input type="radio" name="rating" value="4" id="rate2"><label for="rate2">⭐</label>
-								        <input type="radio" name="rating" value="3" id="rate3"><label for="rate3">⭐</label>
-								        <input type="radio" name="rating" value="2" id="rate4"><label for="rate4">⭐</label>
-								        <input type="radio" name="rating" value="1" id="rate5"><label for="rate5">⭐</label>
-										</fieldset>
-													<!-- 전송 버튼 -->
-											<input type="submit" class="commnet_submit_btn" value="등록">
+			<!-- 리뷰 입력 파트 -->
+                        <c:if test="${sessionScope.id!=null }"><!--로그인 된 상태 -->
+				<div class="input_comments">
+					<form method="post" action="newdetail_commentInput.do" class="comment_form" name="myform" id="myform">
+						<input type="text" class="comment_title" size=70 name="title">
+						<p></p>
+						<input type="text" class="comment_text" size=70 name="comments">
+						<input type="hidden" name="bno" value="${vo.bno }">
+						<input type="hidden" name="writer" value="${sessionScope.name }">
+						<input type="hidden" name="c_userid" value="${sessionScope.id }">
+						<p></p>
+						 <!-- 평점 선택창 -->
+						<fieldset>
+							<input type="radio" name="rating" value="5" id="rate1"><label for="rate1">⭐</label>
+							<input type="radio" name="rating" value="4" id="rate2"><label for="rate2">⭐</label>
+							<input type="radio" name="rating" value="3" id="rate3"><label for="rate3">⭐</label>
+							<input type="radio" name="rating" value="2" id="rate4"><label for="rate4">⭐</label>
+							<input type="radio" name="rating" value="1" id="rate5"><label for="rate5">⭐</label>
+						</fieldset>
+						<!-- 전송 버튼 -->
+						<input type="submit" class="commnet_submit_btn" value="등록">
 										
-									    </form>
-									    
-									    
-									    
-									    
-									    
-									 	<!--  ------------------------------------------------------------ -->
-									</div>
-									</c:if>
+					</form>
+					<!--  ------------------------------------------------------------ -->
+				</div>
+			</c:if>
 									<!-- 리뷰 출력 파트-->
 									<div class="print_comments">
 										<c:forEach var="cvo" items="${clist }">
